@@ -423,6 +423,10 @@ private:
 
 GameSpyPSMessageQueueInterface* GameSpyPSMessageQueueInterface::createNewMessageQueue( void )
 {
+#ifdef ZH_ONLINE
+	if (OnlineBridge_IsConfigured())
+		return OnlineBridge_NewPSQueue();
+#endif
 	return NEW GameSpyPSMessageQueue;
 }
 

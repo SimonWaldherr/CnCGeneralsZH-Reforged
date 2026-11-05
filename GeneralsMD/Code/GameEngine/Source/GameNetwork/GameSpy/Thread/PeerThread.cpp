@@ -45,6 +45,7 @@
 #include "GameNetwork/GameSpy/PeerThread.h"
 #include "GameNetwork/GameSpy/PersistentStorageThread.h"
 #include "GameNetwork/GameSpy/ThreadUtils.h"
+#include "GameNetwork/GeneralsOnline/OnlineBridge.h"
 
 #include "strtok_r.h"
 #include "mutex.h"
@@ -182,6 +183,10 @@ private:
 
 GameSpyPeerMessageQueueInterface* GameSpyPeerMessageQueueInterface::createNewMessageQueue( void )
 {
+#ifdef ZH_ONLINE
+	if (OnlineBridge_IsConfigured())
+		return OnlineBridge_NewPeerQueue();
+#endif
 	return NEW GameSpyPeerMessageQueue;
 }
 

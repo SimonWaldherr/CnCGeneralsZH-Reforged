@@ -92,9 +92,9 @@ HOTKEY_BUTTON_TOP, HOTKEY_BUTTON_WIDTH = 412, 104
 HOTKEY_COMMAND_COLUMNS = (68, 32)
 HOTKEY_BUTTON_COLUMNS = (12, 66, 22)
 # strings OptionsMenuHotkeys.cpp shows besides the captions above
-HOTKEY_STRINGS = ["GUI:HotkeysNone", "GUI:HotkeysPressKey", "GUI:HotkeysPressLetter", "GUI:HotkeysPressForceAttack",
+HOTKEY_STRINGS = ["GUI:HotkeysNone", "GUI:HotkeysPressKey", "GUI:HotkeysPressLetter",
                   "GUI:HotkeysClash", "GUI:HotkeysAlsoOn", "GUI:HotkeysFixed", "GUI:HotkeysGameKey",
-                  "GUI:HotkeysMoved", "GUI:HotkeysForceAttack", "GUI:HotkeysPick", "GUI:HotkeysOnFixedKey",
+                  "GUI:HotkeysMoved", "GUI:HotkeysPick", "GUI:HotkeysOnFixedKey",
                   "GUI:HotkeysButtonMoved", "TOOLTIP:HotkeyChange", "TOOLTIP:HotkeyClear",
                   "TOOLTIP:HotkeyDefault"]
 
@@ -189,6 +189,7 @@ NEW_CONTROLS = [
     (LABEL,  "LabelTextFactions",      "GUI:TextFactions"),
     (COMBO,  "ComboBoxTextFactions",   None),
     (CHECK,  "CheckOrderLines",        "GUI:OrderLines"),
+    (CHECK,  "CheckAircraftAltitudeLine", "GUI:AircraftAltitudeLine"),
     (CHECK,  "CheckNetBox",            "GUI:NetBox"),
     (CHECK,  "CheckEmptyBuildingPips", "GUI:EmptyBuildingPips"),
     (CHECK,  "CheckZoomToCursor",      "GUI:ZoomToCursor"),
@@ -466,6 +467,7 @@ GROUP_LAYOUT = [
             setting("LabelHealthBarColors", "ComboBoxHealthBarColors"),
             setting("LabelPlayerColors", "ComboBoxPlayerColors"),
             ("check", "CheckOrderLines"),
+            ("check", "CheckAircraftAltitudeLine"),
             ("check", "CheckEmptyBuildingPips")]),
         ("GUI:OptionsGroupLanguage", [
             setting("LabelLanguage", "ComboBoxLanguage"),
